@@ -1,0 +1,143 @@
+:root {
+  /* 色管理用の変数 */
+  --black-color: #333;
+  --primary-color: #80572e;
+  --secondary-color: #fcd95b;
+  --gray-color: #dadce0;
+}
+
+.App {
+  width: 1080px;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--primary-color);
+  width: 100%;
+  text-shadow: 1px 1px 0 #ffffffc3, -1px -1px 0 #ffffffc3, -1px 1px 0 #ffffffc3,
+    1px -1px 0 #ffffffc3, 0px 1px 0 #ffffffc3, 0-1px 0 #ffffffc3,
+    -1px 0 0 #ffffffc3, 1px 0 0 #ffffffc3;
+}
+
+footer {
+  text-align: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 16px 0;
+  text-shadow: 1px 1px 0 #ffffffc3, -1px -1px 0 #ffffffc3, -1px 1px 0 #ffffffc3,
+    1px -1px 0 #ffffffc3, 0px 1px 0 #ffffffc3, 0-1px 0 #ffffffc3,
+    -1px 0 0 #ffffffc3, 1px 0 0 #ffffffc3;
+  width: 100%;
+  height: 100%;
+  position: inherit;
+  bottom: 0;
+}
+
+nav ul li {
+  font-size: 24px;
+  list-style: none;
+  display: inline-block;
+  padding: 16px 8px 8px 8px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.container {
+  height: 90%;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* ---------- Calendar ---------- */
+
+.l_header {
+  background-color: var(--secondary-color);
+  text-shadow: 1px 1px 0 #070707c3, -1px -1px 0 #101010c3, -1px 1px 0 #0e0e0ec3,
+    1px -1px 0 #090909c3, 0px 1px 0 #0c0c0cc3, 0-1px 0 #0b0b0bc3,
+    -1px 0 0 #000000c3, 1px 0 0 #000000c3;
+}
+
+body {
+  color: var(--black-color);
+  font-size: 16px;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 98px);
+  height: 100%;
+}
+
+.calendar_table-head {
+  height: 30px;
+  border-bottom: 1px solid var(--gray-color);
+}
+
+.calendar_table-row {
+  flex: 110%;
+  height: 100%;
+}
+
+/* カレンダーの行線 */
+.calendar_table-row:not(:last-child) {
+  border-bottom: 1px solid var(--gray-color);
+}
+
+.calendar_table-data {
+  flex: 110%;
+  height: 100%;
+}
+
+/* カレンダーの列線 */
+.calendar_table-data:not(:last-child) {
+  height: 100%;
+  border-right: 1px solid var(--gray-color);
+}
+
+.calendar_table-data.is-disabled {
+  color: var(--gray-color);
+}
+
+.calendar_date {
+  width: 28px;
+  height: 28px;
+  display: block;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.calendar_event {
+  background-color: var(--secondary-color);
+  margin-top: 8px;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}
+
+.calendar_event:hover {
+  opacity: 0.7;
+}
+
+/* ---------- Menu ---------- */
+
+.mene-ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  padding-left: 0;
+}
+
+.mene-img {
+  padding: 0 8px;
+}
